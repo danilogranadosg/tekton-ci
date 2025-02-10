@@ -96,10 +96,10 @@ spec:
         resources: 
           requests: 
             memory: 64Mi 
-            cpu: 100m 
+            cpu: 20m 
           limits: 
             memory: 128Mi 
-            cpu: 200m
+            cpu: 40m
       - name: print-date-unix-timestamp
         image: bash:latest
         script: |
@@ -108,10 +108,10 @@ spec:
         resources:
           requests:
             memory: 64Mi
-            cpu: 100m
+            cpu: 20m
           limits:
             memory: 128Mi
-            cpu: 200m
+            cpu: 40m
       - name: shorten-commit-hash
         image: bash:latest
         script: |
@@ -120,10 +120,10 @@ spec:
         resources:
           requests:
             memory: 64Mi
-            cpu: 100m
+            cpu: 20m
           limits:
             memory: 128Mi
-            cpu: 200m
+            cpu: 40m
   - name: img-build-publish
     taskRef:
       name: kaniko
